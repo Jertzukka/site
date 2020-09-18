@@ -8,6 +8,13 @@
     <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
     <script src='script.js'></script>
 </head>
+
+<style>
+    #logbox {
+        margin-top: 10px;
+    }
+</style>
+
 <body>
     <div id=header>
         <img src="avatar.jpeg" alt="Avatar" id="avatar">
@@ -33,16 +40,17 @@
         </div>
     </div>
     <div id=content>
-        <h1>About</h1>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting 
-            industry. Lorem Ipsum has been the industry's standard dummy text 
-            ever since the 1500s, when an unknown printer took a galley of 
-            type and scrambled it to make a type specimen book. It has survived 
-            not only five centuries, but also the leap into electronic typesetting,
-             remaining essentially unchanged. It was popularised in the 1960s with 
-             the release of Letraset sheets containing Lorem Ipsum passages, 
-             and more recently with desktop publishing software like Aldus 
-             PageMaker including versions of Lorem Ipsum.</p>
+        <h1>Logviewer</h1>
+        <div id=searchbar>
+            Search term: <input id=searchbox type="text">
+            <input value="Search" type="button" onclick="Search();">
+        </div>
+        <div id=logs>
+            <textarea id=logbox rows=10 cols=50></textarea>
+        </div>
+    </div>
+    <div id=footer>
+        <a href="https://github.com/jertzukka">github.com/jertzukka</a> | <a href="mailto:contact@jertz.xyz">contact@jertz.xyz</a>
     </div>
 </body>
 </html>
