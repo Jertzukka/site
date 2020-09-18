@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+html {
+    background-image: url("./Mountains.jpg");
+    background-repeat: no-repeat;
+    background-position-x: center;
+    display: table;
+    margin: auto;
+}
+
+body {
+    max-width: 800px;
+    min-width: 800px;
+    vertical-align: center;
+    margin: 0;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+#header {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: azure;
+
+}
+
+#content {
+    background-color: rgba(255, 255, 255, 0.7);
+    font-family: 'Roboto', sans-serif;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+#linkcontainer {
+    display: flex;
+    flex-direction: row;
+}
+
+div[id*='tab'] {
+    display:flex;
+    flex-direction: column;
+    margin: 5px;
+    margin-bottom: 0;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 0.5rem;
+}
+
+a {
+    color: inherit;
+}
