@@ -3,7 +3,7 @@
 * {
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-    border-radius: 2px;
+    border-radius: 3px;
 }
 
 html {
@@ -30,8 +30,26 @@ h1 {
     margin-top: 0;
 }
 
+h3 {
+    margin-top: 0;
+}
+
 p {
-    margin-bottom: 0;
+    margin-bottom: 10;
+}
+
+div#blogpost {
+    background-color: rgba(150, 150, 150, 0.5);
+    padding: 0.5rem;
+}
+
+ref {
+    vertical-align: super;
+    font-size: x-small;
+}
+
+references {
+    font-size: x-small;
 }
 
 #header {
