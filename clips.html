@@ -3,6 +3,7 @@
    <head>
       <title>Monni Clips</title>
       <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
       <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
       
       <script>
@@ -73,23 +74,44 @@
         function openplayer(event, filename) {
           var playercontainer = document.createElement("div");
           playercontainer.setAttribute("id", "playercontainer")
-          playercontainer.setAttribute("onclick", "this.remove()")
+          playercontainer.setAttribute("onclick", "document.getElementById('videoplayer').src='';this.remove()")
           document.body.appendChild(playercontainer);
 
           var player = document.createElement("div");
           player.setAttribute("id", "player")
           playercontainer.appendChild(player);
 
-          var iframe = document.createElement('iframe');
-          iframe.setAttribute("id", "iframe")
-          iframe.allow='autoplay'
-          iframe.setAttribute("allowfullscreen", "")
-          iframe.src=filename
-          player.appendChild(iframe);
+          var video = document.createElement('video');
           
-          event.preventDefault()
+          video.setAttribute("allowfullscreen", "");
+          video.addEventListener("click", function(e) {
+            e.stopPropagation();
+          });
+
+          video.id = "videoplayer";
+          video.controls = true;
+          video.autoplay = true;
+          video.src=filename
+          
+          player.appendChild(video);
+
+          // var iframe = document.createElement('iframe');
+          // iframe.setAttribute("id", "iframe")
+          // iframe.allow='autoplay'
+          // iframe.setAttribute("allowfullscreen", "")
+          // iframe.src=filename
+
+          // player.appendChild(iframe);
+
+          event.preventDefault();
           return false;
         }
+
+        player.childNodes[0].onload = function() {
+            let myiFrame = document.getElementById("myiFrame");
+            let doc = myiFrame.contentDocument;
+            doc.body.innerHTML = doc.body.innerHTML + '<style>/******* Put your styles here *******</style>';
+          }
 
         function setSize(rem) {
           var elements = document.getElementsByClassName("video");
@@ -184,17 +206,18 @@
         top: 50%;
         transform: translate(-50%, -50%);
       }
-      #iframe {
-        width: 100%;
-        height: 100%;
-        border: blueviolet;
-        border-style: solid;
-      }
       #footer {
         color: rgba(255, 255, 255, 0.7);
         text-align: center;
         margin: 20px 20px 20px 20px;
         font-weight: 200;
+      }
+      video {
+        background-color: blueviolet;
+        width: 100%;
+        height: 100%;
+        border: blueviolet;
+        border-style: solid;
       }
       </style>
       
