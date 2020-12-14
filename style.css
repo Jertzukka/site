@@ -43,6 +43,11 @@ div#blogpost {
     padding: 0.5rem;
 }
 
+div#script {
+    background-color: rgba(150, 150, 150, 0.5);
+    padding: 0.5rem;
+}
+
 ref {
     vertical-align: super;
     font-size: x-small;
