@@ -96,6 +96,10 @@ references {
     padding: 0.5rem;
 }
 
+*[id*='tab']:hover {
+    background-color: rgba(170, 170, 170, 0.7);
+}
+
 a {
     color: inherit;
     text-decoration: none;
@@ -112,7 +116,7 @@ a {
 }
 
 #dropdown-content a:hover {
-    background-color: rgba(140, 140, 140, 0.7);
+    background-color: rgba(170, 170, 170, 0.7);
 }
 
 #dropdown-content a {
