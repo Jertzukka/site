@@ -15,7 +15,7 @@ html {
     display: table;
     margin: auto;
     height: 100%;
-    width: 100%
+    width: 100%;
 }
 
 body {
@@ -38,6 +38,14 @@ p {
     margin-bottom: 10;
 }
 
+div#lang {
+    padding-bottom: 0.5rem;
+}
+
+.glow {
+    text-shadow: 0 0 10px #f8f4f4, 0 0 20px #f8f4f4;
+}
+
 div#blogpost {
     background-color: rgba(150, 150, 150, 0.5);
     padding: 0.5rem;
@@ -46,6 +54,8 @@ div#blogpost {
 div#script {
     background-color: rgba(150, 150, 150, 0.5);
     padding: 0.5rem;
+    padding-bottom: 1px;
+    margin-bottom: 1rem;
 }
 
 ref {
