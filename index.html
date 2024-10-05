@@ -1,55 +1,159 @@
 <!DOCTYPE html>
-<html id=html>
+<html lang="en">
+
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Jertz's Website</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
-    <script src='script.js'></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Landing</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript">
+        function swap(num) {
+            console.log(num);
+            if (num=="1") {document.getElementById("tabimage").src="rt.avif"; document.getElementById("tablink").href="https://remotetriggers.azurewebsites.net"}
+            else if (num=="2") {document.getElementById("tabimage").src="xs.avif"; document.getElementById("tablink").href="https://github.com/Jertzukka/xenforo-scraper"}
+            else if (num=="3") {document.getElementById("tabimage").src="dl.avif"; document.getElementById("tablink").href="https://github.com/Jertzukka/dlensExporter"}
+            else if (num=="4") {document.getElementById("tabimage").src="clips.avif"; document.getElementById("tablink").href="clips.html"}
+        }
+    </script>
 </head>
-<body>
-    <div id=fullbody>
-        <div id=header>
-            <img src="avatar.jpeg" alt="Avatar" id="avatar">
-            <p>@jertzukka</p>
-        </div>
-        <div id=linkcontainer>
-            <a id=tab1 href="./">Frontpage</a>
-            <a id=tab2 href="./about">About</a>
-            <a id=tab3 href="./projects">Projects</a>
-        </div>
-        <div id=content>
-            <h1><center>Welcome!</center></h1>
-            <p>
-                This is a website for my personal projects, scripts and blog posts which 
-                might turn out to be useful or interesting for someone. The posts will be mainly related 
-                to my interests which are Linux and programming.
-            </p>
-            <hr>
-            <h2>Blog posts</h2>
-            <div id=blogpost>
-                <h3>7.11.2020</h3>
-                <p>
-                    With the recent cases of DMCA problems over at Twitch I decided to download someone
-                    clips over from channels and build a static website where one could easily view them.
-                    I decided to go very barebones with just a shell script that reads video names and
-                    creates HTML elements while scraping the relevant json files for data such as upload
-                    date, views and such. This is the first time I'm making a website of this kind so I
-                    decided to avoid any bloat frameworks and started from scratch.
-                </p><p>
-                    The content I uploaded at Azure Cloud with their blob storage service, which I managed
-                    to get with $100 free credits for the Azure for Students campaign through my university
-                    account. Not really sure how much data transfer I can actually support, but probably
-                    not that much. I'll just leave the website up as long as I don't run out of bandwith
-                    and it's still accessible.
-                </p>
+
+<body id="top">
+    <div class="page-wrapper">
+        <div class="navigation">
+            <div class="navbar">
+                <div class="navbar_container">
+                    <a class="navbar_logo" href="#top">
+                    <svg fill="currentcolor" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 495.398 495.398" xml:space="preserve"><path d="M487.083,225.514l-75.08-75.08V63.704c0-15.682-12.708-28.391-28.413-28.391c-15.669,0-28.377,12.709-28.377,28.391 v29.941L299.31,37.74c-27.639-27.624-75.694-27.575-103.27,0.05L8.312,225.514c-11.082,11.104-11.082,29.071,0,40.158 c11.087,11.101,29.089,11.101,40.172,0l187.71-187.729c6.115-6.083,16.893-6.083,22.976-0.018l187.742,187.747 c5.567,5.551,12.825,8.312,20.081,8.312c7.271,0,14.541-2.764,20.091-8.312C498.17,254.586,498.17,236.619,487.083,225.514z"></path><path d="M257.561,131.836c-5.454-5.451-14.285-5.451-19.723,0L72.712,296.913c-2.607,2.606-4.085,6.164-4.085,9.877v120.401 c0,28.253,22.908,51.16,51.16,51.16h81.754v-126.61h92.299v126.61h81.755c28.251,0,51.159-22.907,51.159-51.159V306.79 c0-3.713-1.465-7.271-4.085-9.877L257.561,131.836z"></path></svg>
+                    </a>
+                    <div class="navbar_menu">
+                        <div class="navbar_item">
+                            <a class="navbar_link" href="#about">
+                                <div>About</div>
+                            </a>
+                        </div>
+                        <div class="navbar_item">
+                            <a class="navbar_link" href="#posts">
+                                <div>Posts</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div id=footer>
-            <a href="https://github.com/jertzukka">github.com/jertzukka</a> | <a href="mailto:contact@jertz.xyz">contact@jertz.xyz</a>
+        <div class="main-wrapper">
+            <div class="intro-wrap">
+                <div class="background-image">
+                    <img src="back.avif">
+                </div>
+                <div class="padding-global">
+                    <div class="container-large">
+                        <div class="padding-section-large">
+                            <div class="bottom-margin-small">
+                                <h1 class="heading-h1">Hey, I'm Jere.</h1>
+                            </div>
+                            <div class="soft-wrap">
+                                <p class="text-medium">Here's how you can find me.  </p>
+                            </div>
+                            <div class="link-container">
+                                <div class="link-section">
+                                    <div class="card">
+                                        <a href="https://github.com/jertzukka">
+                                            <div class="card-button">
+                                                <svg width="80" height="80" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M10.5 1.46547C15.3344 1.46547 19.25 5.38109 19.25 10.2155C19.2488 13.9748 16.8506 17.3148 13.2894 18.5167C12.8519 18.6042 12.6875 18.3305 12.6875 18.1011C12.6875 17.8055 12.6988 16.8648 12.6988 15.6948C12.6988 14.8748 12.4256 14.3498 12.1081 14.0761C14.055 13.8573 16.1006 13.1136 16.1006 9.75609C16.1006 8.79359 15.7613 8.01672 15.2038 7.40484C15.2913 7.18609 15.5975 6.28922 15.1163 5.08609C15.1163 5.08609 14.3831 4.84547 12.71 5.98297C12.01 5.78609 11.2663 5.68797 10.5225 5.68797C9.77875 5.68797 9.035 5.78609 8.335 5.98297C6.66188 4.85672 5.92875 5.08609 5.92875 5.08609C5.4475 6.28922 5.75375 7.18609 5.84125 7.40484C5.28375 8.01734 4.94438 8.80484 4.94438 9.75609C4.94438 13.103 6.97875 13.858 8.92563 14.0767C8.67375 14.2955 8.44438 14.6786 8.3675 15.2467C7.86438 15.4767 6.60625 15.8486 5.81938 14.5248C5.655 14.2623 5.16313 13.6173 4.47438 13.628C3.74125 13.6392 4.17938 14.0436 4.485 14.2073C4.85688 14.4148 5.28313 15.1917 5.38188 15.4436C5.55688 15.9355 6.12563 16.8767 8.32375 16.4717C8.32375 17.2048 8.335 17.8936 8.335 18.1011C8.335 18.3311 8.17063 18.593 7.73313 18.5167C4.15875 17.3267 1.74813 13.9823 1.75 10.2148C1.75 5.38047 5.66563 1.46547 10.5 1.46547Z" fill="currentcolor" fill-opacity="1"></path>
+                                                </svg>
+                                            </div>
+                                        </a>
+                                        <div class="card-text">
+                                            <p class="text-small">GitHub</p>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <a href="mailto:contact@jertz.lol">
+                                            <div class="card-button">
+                                                <svg fill="currentcolor" width="80" height="80" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M22,5V9L12,13,2,9V5A1,1,0,0,1,3,4H21A1,1,0,0,1,22,5ZM2,11.154V19a1,1,0,0,0,1,1H21a1,1,0,0,0,1-1V11.154l-10,4Z"></path>
+                                                </svg>
+                                            </div>
+                                            <div class="card-text">
+                                                <p class="text-small">Email </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="card">
+                                        <a href="https://twitch.tv/jertzukka">
+                                            <div class="card-button">
+                                                <svg width="80" height="80" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M3 5.75L6.75 2H21V12.5L14.25 19.25H11.25L7.5 23V19.25H3V5.75ZM19.5 11.75L16.5 14.75H13.5L10.5 17.75V14.75H7.5V3.5H19.5V11.75ZM12 6.5H13.5V11H12V6.5ZM17.25 6.5V11H15.75V6.5H17.25Z" fill="currentcolor"></path>
+                                                </svg>
+                                            </div>
+                                            <div class="card-text">
+                                                <p class="text-small">Twitch</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="padding-global">
+                    <div class="container-large extra-large">
+                        <div class="padding-section-medium">
+                            <div class="text-align-center">
+                                <h4 class="h4-style">Some interesting things I've done</h4>
+                            </div>
+                        </div>
+                        <div class="tabber-container">
+                            <div class="tabber-nav">
+                                <div class="pagination-item" onclick="swap('1')">
+                                    <div class="pagination-icon">
+                                        <svg width="18" height="18" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="currentcolor"><path d="M3.04 10h2.58l.65 1H2.54l-.5-.5v-9l.5-.5h12l.5.5v4.77l-1-1.75V2h-11v8zm5.54 1l-1.41 3.47h2.2L15 8.7 14.27 7h-1.63l.82-1.46L12.63 4H9.76l-.92.59-2.28 5L7.47 11h1.11zm1.18-6h2.87l-1.87 3h3.51l-5.76 5.84L10.2 10H7.47l2.29-5zM6.95 7H4.04V6H7.4l-.45 1zm-.9 2H4.04V8H6.5l-.45 1z"></path></svg>
+                                    </div>
+                                    <div class="pagination-text">RemoteTriggers</div>
+                                </div>
+                                <div class="pagination-item" onclick="swap('2')">
+                                    <div class="pagination-icon">
+                                        <svg fill="currentcolor" width="18" height="18" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M0 16q0 2.912 1.824 5.088t4.576 2.752q0.032 0 0.032-0.032v-0.064t0.032-0.032q0.544-1.344 1.344-2.176t2.208-1.184v-2.336q0-2.496 1.728-4.256t4.256-1.76 4.256 1.76 1.76 4.256v2.336q1.376 0.384 2.176 1.216t1.344 2.144l0.096 0.288h0.384q2.464 0 4.224-1.76t1.76-4.224v-2.016q0-2.464-1.76-4.224t-4.224-1.76q-0.096 0-0.32 0.032 0.32-1.152 0.32-2.048 0-3.296-2.368-5.632t-5.632-2.368q-2.88 0-5.056 1.824t-2.784 4.544q-1.152-0.352-2.176-0.352-3.296 0-5.664 2.336t-2.336 5.664v1.984zM10.016 25.824q-0.096 0.928 0.576 1.6l4 4q0.576 0.576 1.408 0.576t1.408-0.576l4-4q0.672-0.672 0.608-1.6-0.064-0.32-0.16-0.576-0.224-0.576-0.736-0.896t-1.12-0.352h-1.984v-5.984q0-0.832-0.608-1.408t-1.408-0.608-1.408 0.608-0.576 1.408v5.984h-2.016q-0.608 0-1.12 0.352t-0.736 0.896q-0.096 0.288-0.128 0.576z"></path></svg>
+                                    </div>
+                                    <div class="pagination-text">XenforoScraper</div>
+                                </div>
+                                <div class="pagination-item" onclick="swap('3')">
+                                    <div class="pagination-icon">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentcolor" xmlns="http://www.w3.org/2000/svg"><path d="M15.0002 22.75C14.7302 22.75 14.4802 22.6 14.3502 22.37C14.2202 22.14 14.2202 21.85 14.3602 21.62L15.4102 19.87C15.6202 19.51 16.0802 19.4 16.4402 19.61C16.8002 19.82 16.9102 20.28 16.7002 20.64L16.4302 21.09C19.1902 20.44 21.2602 17.96 21.2602 15C21.2602 14.59 21.6002 14.25 22.0102 14.25C22.4202 14.25 22.7602 14.59 22.7602 15C22.7502 19.27 19.2702 22.75 15.0002 22.75Z" fill="currentcolor"></path><path d="M2 9.75C1.59 9.75 1.25 9.41 1.25 9C1.25 4.73 4.73 1.25 9 1.25C9.27 1.25 9.52 1.4 9.65 1.63C9.78 1.86 9.78 2.15 9.64 2.38L8.59 4.14C8.38 4.49 7.92 4.61 7.56 4.39C7.21 4.18 7.09 3.72 7.31 3.36L7.58 2.91C4.81 3.56 2.75 6.04 2.75 9C2.75 9.41 2.41 9.75 2 9.75Z" fill="currentcolor"></path><path d="M10.6709 13.8484L7.53094 12.1584C7.20094 11.9784 6.80094 11.9784 6.47094 12.1584L3.33094 13.8484C3.10094 13.9684 2.96094 14.2184 2.96094 14.4884C2.96094 14.7584 3.10094 15.0084 3.33094 15.1284L6.47094 16.8184C6.64094 16.9084 6.82094 16.9484 7.00094 16.9484C7.18094 16.9484 7.36094 16.9084 7.53094 16.8184L10.6709 15.1284C10.9009 15.0084 11.0409 14.7584 11.0409 14.4884C11.0409 14.2184 10.8909 13.9784 10.6709 13.8484Z" fill="currentcolor"></path><path d="M5.95 17.4106L3.03 15.9506C2.81 15.8406 2.55 15.8506 2.33 15.9806C2.13 16.1106 2 16.3406 2 16.5906V19.3506C2 19.8306 2.26 20.2606 2.69 20.4706L5.61 21.9306C5.71 21.9706 5.82 22.0006 5.93 22.0006C6.06 22.0006 6.19 21.9606 6.31 21.8906C6.52 21.7606 6.65 21.5306 6.65 21.2806V18.5206C6.65 18.0506 6.38 17.6206 5.95 17.4106Z" fill="currentcolor"></path><path d="M11.6616 15.9806C11.4516 15.8506 11.1916 15.8406 10.9616 15.9506L8.04156 17.4106C7.61156 17.6206 7.35156 18.0506 7.35156 18.5306V21.2906C7.35156 21.5406 7.48156 21.7706 7.69156 21.9006C7.81156 21.9606 7.94156 22.0006 8.07156 22.0006C8.18156 22.0006 8.29156 21.9706 8.39156 21.9206L11.3116 20.4606C11.7416 20.2506 12.0016 19.8206 12.0016 19.3406V16.5806C12.0016 16.3406 11.8716 16.1106 11.6616 15.9806Z" fill="currentcolor"></path><path d="M20.6709 3.82891L17.5309 2.13891C17.2009 1.95891 16.8009 1.95891 16.4709 2.13891L13.3309 3.82891C13.1009 3.94891 12.9609 4.19891 12.9609 4.46891C12.9609 4.73891 13.1009 4.98891 13.3309 5.10891L16.4709 6.79891C16.6409 6.88891 16.8209 6.92891 17.0009 6.92891C17.1809 6.92891 17.3609 6.88891 17.5309 6.79891L20.6709 5.10891C20.9009 4.98891 21.0409 4.73891 21.0409 4.46891C21.0409 4.18891 20.8909 3.94891 20.6709 3.82891Z" fill="currentcolor"></path><path d="M15.95 7.37938L13.03 5.91938C12.81 5.80938 12.55 5.81937 12.33 5.94937C12.13 6.07937 12 6.30937 12 6.55937V9.31937C12 9.79937 12.26 10.2294 12.69 10.4394L15.61 11.8994C15.71 11.9494 15.82 11.9794 15.93 11.9794C16.06 11.9794 16.19 11.9394 16.31 11.8694C16.52 11.7394 16.65 11.5094 16.65 11.2594V8.49938C16.65 8.01938 16.38 7.58938 15.95 7.37938Z" fill="currentcolor"></path><path d="M21.6616 5.94937C21.4516 5.81937 21.1916 5.80938 20.9616 5.91938L18.0416 7.37938C17.6116 7.58938 17.3516 8.01938 17.3516 8.49938V11.2594C17.3516 11.5094 17.4816 11.7394 17.6916 11.8694C17.8116 11.9394 17.9416 11.9794 18.0716 11.9794C18.1816 11.9794 18.2916 11.9494 18.3916 11.8994L21.3116 10.4394C21.7416 10.2194 22.0016 9.78937 22.0016 9.31937V6.55937C22.0016 6.30937 21.8716 6.07937 21.6616 5.94937Z" fill="currentcolor"></path></svg>
+                                    </div>
+                                    <div class="pagination-text">dlensExporter</div>
+                                </div>
+                                <div class="pagination-item" onclick="swap('4')">
+                                    <div class="pagination-icon">
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentcolor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M15.3276 7.54199H8.67239C5.29758 7.54199 3.61017 7.54199 2.66232 8.52882C1.71447 9.51565 1.93748 11.0403 2.38351 14.0895L2.80648 16.9811C3.15626 19.3723 3.33115 20.5679 4.22834 21.2839C5.12553 21.9999 6.4488 21.9999 9.09534 21.9999H14.9046C17.5512 21.9999 18.8745 21.9999 19.7717 21.2839C20.6689 20.5679 20.8437 19.3723 21.1935 16.9811L21.6165 14.0895C22.0625 11.0403 22.2855 9.51564 21.3377 8.52882C20.3898 7.54199 18.7024 7.54199 15.3276 7.54199ZM14.5812 15.7942C15.1396 15.448 15.1396 14.5519 14.5812 14.2057L11.2096 12.1156C10.6669 11.7792 10 12.2171 10 12.9098V17.0901C10 17.7828 10.6669 18.2207 11.2096 17.8843L14.5812 15.7942Z" fill="currentcolor"></path><path opacity="0.4" d="M8.50956 2.00001H15.4897C15.7221 1.99995 15.9004 1.99991 16.0562 2.01515C17.164 2.12352 18.0708 2.78958 18.4553 3.68678H5.54395C5.92846 2.78958 6.83521 2.12352 7.94303 2.01515C8.09884 1.99991 8.27708 1.99995 8.50956 2.00001Z" fill="currentcolor"></path><path opacity="0.7" d="M6.3102 4.72266C4.91958 4.72266 3.77931 5.56241 3.39878 6.67645C3.39085 6.69967 3.38325 6.72302 3.37598 6.74647C3.77413 6.6259 4.18849 6.54713 4.60796 6.49336C5.68833 6.35485 7.05367 6.35492 8.6397 6.35501H15.5318C17.1178 6.35492 18.4832 6.35485 19.5635 6.49336C19.983 6.54713 20.3974 6.6259 20.7955 6.74647C20.7883 6.72302 20.7806 6.69967 20.7727 6.67645C20.3922 5.56241 19.2519 4.72266 17.8613 4.72266H6.3102Z" fill="currentcolor"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="pagination-text">Clips</div>
+                                </div>
+                            </div>
+                            <div class="tabber-page">
+                                <div class="tabber-image">
+                                    <a id="tablink" href="https://remotetriggers.azurewebsites.net/" target="_blank">
+                                        <img id="tabimage" src="rt.avif">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <div class="info-wrap">
+                <div class="padding-section-medium">
+                    <div class="text-align-center">
+                        <div class="heading-h2" id="about"><h2>About me</h2></div>
+                        <h4 class="h4-style">A university student with interest in Economics and Software development</h4>
+                        <h4 class="h4-style">An avid contributor to Open Source projects</h4>
+                        <h4 class="h4-style">Daily-driving Linux and KDE since 2019</h4>
+                        <h4 class="h4-style">Most proficient in C++, Python and Bash</h4>
+                    </div>
+                </div>
+            </div>
         </div>
-        <img id="img_whatever" class="hidden" src="./Mountains.jpg" onload="upgradeImage(this);">
     </div>
 </body>
+
 </html>
